@@ -31,7 +31,7 @@
     "@storybook/blocks": "^7.0.18",
     "@storybook/nextjs": "^7.0.18",
     "@storybook/react": "^7.0.18",
-    "@storybook/testing-library": "^0.0.14-next.2",
+    "@storybook/testing-library": "^0.2.0",
     "@testing-library/react": "^14.0.0",
     "@vitejs/plugin-react": "^4.0.0",
     "eslint-config-next": "^13.4.4",
@@ -47,6 +47,6 @@
     "jsdom": "^22.1.0",
     "prettier": "2.8.8",
     "storybook": "^7.0.18",
-    "vitest": "^0.31.4"
+    "vitest": "^0.34.0"
   }
 }
