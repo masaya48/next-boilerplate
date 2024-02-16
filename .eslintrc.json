@@ -13,7 +13,7 @@
   ],
   "plugins": ["jest", "import", "unused-imports", "strict-dependencies", "import-access", "testing-library"],
   "parser": "@typescript-eslint/parser",
-  "parserOptions": {"project": "./tsconfig.json"},
+  "parserOptions": { "project": "./tsconfig.json" },
   "rules": {
     "complexity": ["error", 10],
     "no-process-env": "error",
@@ -23,10 +23,10 @@
       {
         "groups": ["builtin", "external", "internal", ["parent", "sibling"], "object", "type", "index"],
         "pathGroupsExcludedImportTypes": ["builtin"],
-        "alphabetize": {"order": "asc", "caseInsensitive": true},
+        "alphabetize": { "order": "asc", "caseInsensitive": true },
         "pathGroups": [
-          {"pattern": "react", "group": "external", "position": "before"},
-          {"pattern": "next", "group": "external", "position": "before"}
+          { "pattern": "react", "group": "external", "position": "before" },
+          { "pattern": "next", "group": "external", "position": "before" }
         ]
       }
     ],
@@ -63,16 +63,6 @@
         "argsIgnorePattern": "^_"
       }
     ],
-    "@typescript-eslint/naming-convention": [
-      "error",
-      {"selector": ["typeAlias", "typeParameter"], "format": ["PascalCase"]},
-      {
-        "selector": "variable",
-        "types": ["boolean"],
-        "format": ["PascalCase"],
-        "prefix": ["no", "is", "has", "should", "can"]
-      }
-    ],
 
     // off にするルール
     "@typescript-eslint/explicit-module-boundary-types": "off",
@@ -84,7 +74,6 @@
     "import-access/jsdoc": "error",
     "react/self-closing-comp": "error",
     "@typescript-eslint/consistent-type-imports": "error",
-    "@typescript-eslint/explicit-function-return-type": "error",
     "func-style": ["error", "expression"],
     "arrow-body-style": ["error", "as-needed"],
     "no-duplicate-imports": "error"
