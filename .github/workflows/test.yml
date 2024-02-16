@@ -1,0 +1,29 @@
+name: Test
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    
+jobs:
+  Install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/install
+  Test:
+    runs-on: ubuntu-latest
+    needs: Install
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/install
+      - run: npm run test
+  Lint:
+    runs-on: ubuntu-latest
+    needs: Install
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/install
+      - run: npm run lint
+
+  
