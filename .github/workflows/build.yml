@@ -1,0 +1,20 @@
+name: Build
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    
+jobs:
+  Install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/install
+  Build:
+    runs-on: ubuntu-latest
+    needs: Install
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/install
+      - run: npm run build

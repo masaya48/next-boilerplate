@@ -1,0 +1,23 @@
+name: Install Composite Action
+description: Install Composite Action
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-node@v4
+      with:
+        node-version-file: '.node-version'
+        cache: npm
+        cache-dependencies-path: ./package-lock.json
+    - name: Cache node_modules
+      id: cache
+      uses: actions/cache@v3
+      env:
+        cache-name: node-modules
+      with:
+        path: |
+          node_modules
+        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }}
+    - run: npn ci
+      if: steps.cache.outputs.cache-hit != 'true'
+      shell: bash
