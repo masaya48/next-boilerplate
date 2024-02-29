@@ -14,9 +14,6 @@ export default {
     'eslint-plugin-storybook',
     'eslint-plugin-testing-library',
     'eslint-plugin-vitest',
-
-    // @types
-    '@types/npm',
   ],
   ignoreExportsUsedInFile: true,
 };

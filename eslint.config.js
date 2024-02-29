@@ -20,7 +20,7 @@ module.exports = [
       'app/_generated/*',
       '*.{js,ts,mjs}',
       '.scaffdog/*',
-      'tests/*',
+      'e2e/*',
     ],
   },
   js.configs.recommended,
@@ -85,6 +85,6 @@ module.exports = [
   },
   {
     ...playwrightPlugin.configs['flat/recommended'],
-    files: ['tests/*'],
+    files: ['e2e/*'],
   },
 ];
